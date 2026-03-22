@@ -1,0 +1,15 @@
+{
+  "contractId": "0.0.8323764",
+  "transactionId": "0.0.6537386@1774142075.906367211",
+  "pestRewardContractId": "0.0.8323760",
+  "backendAddress": "0x91b2b63ca5abc2a1cdb78acb010fb03e2d946eb9",
+  "operatorId": "0.0.6537386",
+  "artifactPath": "/Users/bigdreams/Workspace/agrisense-agents/smart-contracts/artifacts/contracts/CropInsurance.sol/CropInsurance.json",
+  "gas": 2000000,
+  "constructor": {
+    "backendAddress": "0x91b2b63ca5abc2a1cdb78acb010fb03e2d946eb9"
+  },
+  "timestamp": "2026-03-22T01:14:46.182Z",
+  "network": "testnet",
+  "note": "HBAR-based automated insurance payouts"
+}

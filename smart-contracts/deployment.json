@@ -1,0 +1,12 @@
+{
+  "contractId": "0.0.8323752",
+  "transactionId": "0.0.6537386@1774141849.877108118",
+  "operatorId": "0.0.6537386",
+  "artifactPath": "/Users/bigdreams/Workspace/agrisense-agents/smart-contracts/artifacts/contracts/ASAI.sol/ASAI.json",
+  "gas": 1000000,
+  "constructor": {
+    "initialSupply": "1000000000000000"
+  },
+  "timestamp": "2026-03-22T01:10:58.294Z",
+  "network": "testnet"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "agrisense-smart-contracts",
+  "version": "1.0.0",
+  "description": "AgriSense AI Smart Contracts",
+  "main": "index.js",
+  "scripts": {
+    "compile": "npx hardhat compile",
+    "test": "npx hardhat test",
+    "deploy": "node scripts/deploy.js"
+  },
+  "devDependencies": {
+    "@hashgraph/sdk": "^2.71.1",
+    "dotenv": "^16.3.1",
+    "hardhat": "^2.19.0"
+  },
+  "dependencies": {
+    "ethers": "^6.15.0",
+    "node-fetch": "^2.7.0"
+  }
+}

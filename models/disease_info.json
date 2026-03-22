@@ -1,0 +1,197 @@
+{
+  "Apple___Apple_scab": {
+    "crop": "Apple",
+    "disease": "Apple Scab",
+    "advice": "Apple scab, caused by the fungus Venturia inaequalis, thrives in cool, wet conditions and affects leaves, fruits, and twigs, leading to defoliation and reduced fruit quality. For effective management: 1. Cultural practices: Remove and destroy fallen leaves and debris in autumn to eliminate overwintering spores. Prune trees during dormant season to improve air circulation and sunlight penetration, reducing humidity in the canopy. Space trees adequately (at least 20-30 feet apart depending on variety) to promote drying. 2. Resistant varieties: Choose scab-resistant cultivars like Liberty, Enterprise, or GoldRush when planting new orchards to minimize chemical inputs. 3. Fungicide program: Apply protective fungicides starting at green tip stage (e.g., captan, mancozeb, or myclobutanil) and continue every 7-10 days during wet periods until petal fall, following label rates and rotating fungicide classes to prevent resistance. Use weather-based models like the Mills table to time applications based on leaf wetness and temperature. 4. Monitoring and scouting: Inspect trees weekly for early symptoms such as olive-green velvety spots on leaves and scabby lesions on fruits. Use traps or apps for spore monitoring if available. 5. Organic options: For organic farming, apply sulfur-based fungicides or biofungicides like Bacillus subtilis, combined with neem oil for added protection. 6. Integrated Pest Management (IPM): Combine with pest control as scab can worsen with insect damage. Consult local agricultural extension services for region-specific thresholds and recommendations to ensure sustainability and avoid environmental impact."
+  },
+  "Apple___Black_rot": {
+    "crop": "Apple",
+    "disease": "Black Rot",
+    "advice": "Black rot, caused by the fungus Botryosphaeria obtusa, infects fruits, leaves, and branches, causing fruit mummies, leaf spots, and cankers that can girdle limbs. To control it: 1. Sanitation: Prune and remove all infected branches, cankers, and mummified fruits during winter or early spring, burning or burying them to prevent spore spread. Clean pruning tools with 10% bleach solution between cuts. 2. Cultural practices: Improve air circulation through proper pruning and thinning to reduce humidity. Avoid overhead irrigation; use drip systems instead. Maintain balanced fertility to avoid excessive nitrogen, which promotes succulent growth susceptible to infection. 3. Fungicide applications: Apply broad-spectrum fungicides like thiophanate-methyl or captan starting at petal fall and repeating every 10-14 days during warm, wet weather. Rotate modes of action to prevent resistance. 4. Monitoring: Scout orchards regularly for frog-eye leaf spots, black pycnidia on fruits, and cankers on limbs. Remove any symptomatic material immediately. 5. Resistant varieties: Plant resistant cultivars such as Empire or Cortland where possible. 6. Post-harvest: Store fruits at cool temperatures (32-40°F) with good ventilation to prevent rot development. For organic growers, use copper-based sprays or biofungicides. Always follow integrated approaches and consult extension experts for local disease pressure and timing."
+  },
+  "Apple___Cedar_apple_rust": {
+    "crop": "Apple",
+    "disease": "Cedar Apple Rust",
+    "advice": "Cedar apple rust, caused by Gymnosporangium juniperi-virginianae, requires alternate hosts (apple and cedar/juniper) and causes orange-yellow spots on leaves and fruits, leading to defoliation and fruit deformation. Management strategies: 1. Host removal: Eliminate nearby eastern red cedar or juniper trees within a 2-5 mile radius if feasible, as they harbor the fungus overwinter. If not possible, prune galls from cedars in winter. 2. Cultural practices: Plant apple trees in open areas with good air flow. Avoid wetting foliage during irrigation; use ground-level methods. Rake and destroy fallen leaves in fall. 3. Resistant varieties: Select rust-resistant apple cultivars like Delicious, Freedom, or Priscilla to reduce susceptibility. 4. Fungicide sprays: Apply systemic fungicides such as myclobutanil or triadimefon starting at tight cluster stage and continuing through cover sprays every 7-10 days during wet springs. Use predictive models based on weather (wet periods over 4-6 hours at 50-75°F). 5. Monitoring: Check for bright orange gelatinous galls on cedars in spring and yellow spots on apple leaves. Early detection allows targeted sprays. 6. Organic alternatives: Sulfur or copper fungicides can be used, though less effective; combine with resistant varieties. Integrate with IPM, and seek advice from local extension services for regional variations in spore release timing."
+  },
+  "Apple___healthy": {
+    "crop": "Apple",
+    "disease": "Healthy",
+    "advice": "Your apple crop appears healthy with no signs of disease. To maintain this status and prevent future issues: 1. Soil health: Test soil annually for pH (ideal 6.0-7.0) and nutrients; amend with lime or sulfur as needed. Incorporate organic matter like compost to improve drainage and fertility. 2. Water management: Provide 1-2 inches of water weekly via drip irrigation to avoid wetting leaves, reducing fungal risk. Mulch around trees to retain moisture and suppress weeds. 3. Fertilization: Apply balanced N-P-K fertilizer in spring based on soil tests; avoid excess nitrogen to prevent weak growth. 4. Pruning and training: Prune during dormancy to open the canopy for air and light, removing dead or crossing branches. Train young trees to central leader or open vase shape. 5. Pest and disease monitoring: Scout weekly for early signs of pests (e.g., aphids) or diseases; use IPM with beneficial insects and traps. 6. Weed and orchard floor management: Maintain grass or cover crops between rows, mowing regularly to reduce habitat for pests. 7. Harvest and storage: Pick fruits at optimal maturity; store in cool, humid conditions. Rotate crops if possible and use certified disease-free stock for new plantings. Regular consultations with extension services will help sustain long-term health and yield."
+  },
+  "Blueberry___healthy": {
+    "crop": "Blueberry",
+    "disease": "Healthy",
+    "advice": "Your blueberry plants are healthy. To keep them thriving and prevent diseases: 1. Soil preparation: Blueberries require acidic soil (pH 4.5-5.5); test and amend with sulfur or pine bark mulch. Ensure excellent drainage to prevent root rot. 2. Watering: Provide consistent moisture (1-2 inches/week) using soaker hoses; avoid overhead watering. Mulch with pine needles or wood chips to conserve water and acidify soil. 3. Fertilization: Use acid-loving fertilizers (e.g., ammonium sulfate) in spring and early summer; avoid high-phosphorus types. Base applications on soil tests. 4. Pruning: Prune annually after harvest to remove old canes, promote new growth, and improve air circulation. 5. Monitoring: Inspect plants regularly for pests like spider mites or diseases like mummy berry; use IPM with natural predators. 6. Planting and spacing: Plant in full sun with 4-6 feet between bushes; choose varieties suited to your climate (highbush, lowbush, rabbiteye). 7. Weed control: Hand-pull or mulch to suppress weeds without herbicides. Harvest berries when fully ripe. For organic farming, emphasize biodiversity. Consult local experts for variety-specific tips to maximize yields."
+  },
+  "Cherry_(including_sour)___Powdery_mildew": {
+    "crop": "Cherry (including sour)",
+    "disease": "Powdery Mildew",
+    "advice": "Powdery mildew, caused by Podosphaera clandestina, appears as white powdery growth on leaves, shoots, and fruits, reducing photosynthesis and fruit quality in cherries. Control measures: 1. Cultural practices: Prune trees to enhance air circulation and sunlight penetration; thin dense canopies after harvest. Plant in sunny, well-ventilated sites with spacing of 15-20 feet. Avoid excessive nitrogen fertilization that promotes tender growth. 2. Sanitation: Remove and destroy infected plant parts; clean up fallen debris in fall. 3. Resistant varieties: Choose mildew-resistant cultivars like Rainier or Regina for sweet cherries, or Montmorency for sour. 4. Fungicide treatments: Apply sulfur-based or synthetic fungicides (e.g., myclobutanil) at first sign of infection, repeating every 7-14 days during humid conditions. Use horticultural oils in dormant season to smother overwintering spores. 5. Monitoring: Scout for white patches on young leaves in spring; monitor humidity levels (disease favors 60-80% RH without free water). 6. Organic methods: Use potassium bicarbonate sprays or biofungicides like Serenade. Integrate with IPM, avoiding stress from drought or overwatering. Seek extension advice for timing in your region to prevent yield loss."
+  },
+  "Cherry_(including_sour)___healthy": {
+    "crop": "Cherry (including sour)",
+    "disease": "Healthy",
+    "advice": "Your cherry crop is healthy. Sustain it with these practices: 1. Soil management: Prefer well-drained, slightly acidic soil (pH 6.0-7.0); test and amend accordingly. Add organic matter for fertility. 2. Irrigation: Provide deep watering (1 inch/week) via drip systems to keep roots moist without wetting foliage. Mulch to retain soil moisture. 3. Nutrition: Fertilize in early spring with balanced products; use slow-release for steady growth. Avoid excess nitrogen. 4. Pruning: Prune sweet cherries minimally to open center; sour cherries more aggressively after harvest to renew fruiting wood. 5. Pest/disease vigilance: Monitor for aphids, birds, or fungal signs; use netting for birds and IPM for pests. 6. Planting: Ensure full sun and proper pollination (plant compatible varieties). Space trees 15-20 feet apart. 7. Harvest: Pick when ripe to avoid cracking; handle gently. For sour cherries, focus on tart varieties for processing. Regular soil tests and extension consultations will help maintain vigor and resistance to stresses."
+  },
+  "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot": {
+    "crop": "Corn (Maize)",
+    "disease": "Gray Leaf Spot (Cercospora Leaf Spot)",
+    "advice": "Gray leaf spot, caused by Cercospora zeae-maydis, produces rectangular gray lesions on leaves, reducing photosynthesis and yield in corn. Management: 1. Crop rotation: Rotate with non-host crops like soybeans for 1-2 years to break the disease cycle. 2. Residue management: Till or bury crop residues after harvest to reduce overwintering inoculum; use no-till only if disease pressure is low. 3. Resistant hybrids: Plant tolerant or resistant corn hybrids rated for gray leaf spot resistance. 4. Fungicide applications: Apply foliar fungicides (e.g., strobilurins like azoxystrobin or triazoles) at tasseling stage if lesions appear on lower leaves and weather is favorable (warm, humid). Scout fields and use thresholds (e.g., 5% leaf area affected). 5. Cultural practices: Avoid dense planting; space rows 30 inches apart for better air flow. Reduce irrigation to minimize leaf wetness. 6. Monitoring: Inspect lower leaves for tan-to-gray rectangular spots bordered by veins; use apps or extension services for forecasting. 7. Integrated approach: Combine with balanced fertilization to avoid stress. For organic farms, use biofungicides. Consult local agronomists for hybrid recommendations and timing to protect grain fill."
+  },
+  "Corn_(maize)___Common_rust_": {
+    "crop": "Corn (Maize)",
+    "disease": "Common Rust",
+    "advice": "Common rust, caused by Puccinia sorghi, forms brick-red pustules on corn leaves, stems, and husks, potentially reducing yield by 20-40% in severe cases. Control strategies: 1. Resistant varieties: Select rust-resistant hybrids with known genetic resistance (e.g., Rp genes). 2. Cultural practices: Plant early to avoid peak spore periods; ensure good air circulation with proper row spacing (30-36 inches). Avoid excessive nitrogen that promotes lush growth. 3. Fungicide use: Apply protectant fungicides like mancozeb or triazoles at first pustule detection, repeating if needed during cool, moist weather (60-75°F with high humidity). Use disease forecasting models. 4. Sanitation: Remove volunteer corn and alternate hosts like sorghum if present. 5. Monitoring: Scout fields weekly for orange-red pustules on both leaf sides; thresholds vary but act if 10-20% of plants are affected pre-tassel. 6. IPM: Integrate with weed control and balanced nutrition. For sweet corn, which is more susceptible, prioritize resistance. Organic options include sulfur sprays. Work with extension services for region-specific advice to minimize economic losses."
+  },
+  "Corn_(maize)___Northern_Leaf_Blight": {
+    "crop": "Corn (Maize)",
+    "disease": "Northern Leaf Blight",
+    "advice": "Northern leaf blight, caused by Exserohilum turcicum, causes long, cigar-shaped gray-green lesions on corn leaves, leading to premature leaf death and yield loss. Effective management: 1. Crop rotation: Rotate with non-grass crops for 1-2 years to reduce residue-borne inoculum. 2. Residue management: Incorporate or chop residues post-harvest; avoid no-till in high-disease areas. 3. Resistant hybrids: Choose varieties with polygenic resistance or Ht genes for better tolerance. 4. Fungicide applications: Spray foliar fungicides (e.g., propiconazole or pyraclostrobin) at V6-VT stages if lesions are on lower leaves and weather is cool/wet. Rotate chemistries. 5. Cultural controls: Plant at recommended density for air flow; use balanced fertilization to avoid susceptibility from stress. 6. Scouting: Monitor for elliptical lesions with dark borders; use apps for risk assessment based on dew periods (>6 hours). 7. IPM integration: Combine with scouting for other blights. For organic production, use resistant varieties and bioagents. Consult extension for hybrid ratings and thresholds to optimize timing and reduce costs."
+  },
+  "Corn_(maize)___healthy": {
+    "crop": "Corn (Maize)",
+    "disease": "Healthy",
+    "advice": "Your corn crop is healthy. To preserve this and boost yields: 1. Soil testing: Check pH (6.0-7.0) and nutrients annually; apply lime or fertilizers accordingly. Incorporate cover crops for soil health. 2. Planting: Sow at 1-2 inch depth in warm soil (>50°F); space seeds 8-12 inches in rows 30-36 inches apart for optimal density (25,000-35,000 plants/acre). 3. Irrigation: Provide 1-1.5 inches/week, especially during silking; use efficient systems like pivot to avoid waste. 4. Fertilization: Side-dress nitrogen at V6 stage based on tests; include phosphorus and potassium for root development. 5. Weed/pest management: Use pre-emergent herbicides and scout for weeds, insects (e.g., corn borers), and diseases; employ IPM with traps and beneficials. 6. Monitoring: Walk fields weekly for stress signs; use drones if available. 7. Harvest: Harvest at 15-20% moisture for grain; dry properly. Rotate crops to prevent buildup. Extension services can provide hybrid recommendations for your area."
+  },
+  "Grape___Black_rot": {
+    "crop": "Grape",
+    "disease": "Black Rot",
+    "advice": "Black rot, caused by Guignardia bidwellii, affects grape leaves, shoots, and berries, causing mummified fruits and leaf spots, potentially destroying entire clusters. Management: 1. Sanitation: Prune and remove infected canes, mummies, and debris in dormant season; bury or burn to eliminate overwintering sites. 2. Cultural practices: Train vines on trellises for air circulation; thin leaves around clusters to reduce humidity. Avoid overhead irrigation. 3. Resistant varieties: Plant tolerant cultivars like Concord or Norton for American grapes, or resistant hybrids. 4. Fungicide program: Apply contact fungicides (e.g., mancozeb) from bud break and systemics (e.g., myclobutanil) during bloom to berry set, every 7-10 days in wet weather. Use the black rot model for timing. 5. Monitoring: Scout for reddish-brown leaf spots and shriveled berries; remove infected clusters immediately. 6. Organic options: Copper or sulfur sprays, combined with biofungicides. Integrate IPM and consult extension for spray calendars tailored to your vineyard's climate and variety."
+  },
+  "Grape___Esca_(Black_Measles)": {
+    "crop": "Grape",
+    "disease": "Esca (Black Measles)",
+    "advice": "Esca, a complex trunk disease caused by fungi like Phaeomoniella chlamydospora and Phaeoacremonium spp., causes leaf tiger-striping, berry spotting, and vine decline in grapes. Long-term management: 1. Prevention: Use certified disease-free planting material; avoid wounding vines during pruning. Protect pruning cuts with fungicide pastes (e.g., thiophanate-methyl). 2. Cultural practices: Prune late in dormancy when spores are less active; remove and destroy infected wood. Maintain balanced irrigation and nutrition to reduce stress. 3. Trunk renewal: For affected vines, train new suckers to replace dying trunks. 4. Fungicides: Limited efficacy, but apply sodium arsenite (where permitted) or biofungicides post-pruning. Research ongoing for systemic options. 5. Monitoring: Look for interveinal chlorosis on leaves and black streaks in wood cross-sections. Tag and remove severely affected vines. 6. Vineyard hygiene: Sanitize tools; avoid soil compaction. For organic, emphasize prevention and biological controls. Consult experts for diagnosis, as symptoms mimic other issues, and implement a multi-year strategy to sustain vineyard longevity."
+  },
+  "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)": {
+    "crop": "Grape",
+    "disease": "Leaf Blight (Isariopsis Leaf Spot)",
+    "advice": "Leaf blight, caused by Pseudocercospora vitis (formerly Isariopsis), produces angular brown spots on grape leaves, leading to defoliation and weakened vines. Control: 1. Sanitation: Rake and destroy fallen leaves; prune to remove infected canes in winter. 2. Cultural practices: Improve canopy ventilation through proper training and thinning; space vines 6-8 feet apart. Use drip irrigation to keep leaves dry. 3. Resistant varieties: Select tolerant grape types like Muscadine or hybrid varieties. 4. Fungicide sprays: Apply copper-based or mancozeb fungicides starting at bud break, repeating every 10-14 days during warm, humid conditions. 5. Monitoring: Inspect lower leaves for reddish-brown spots with yellow halos; act early in the season. 6. IPM: Combine with nutrient management to bolster vine health. Organic growers can use bicarbonate sprays. Seek local extension guidance for variety-specific thresholds and to prevent overwintering."
+  },
+  "Grape___healthy": {
+    "crop": "Grape",
+    "disease": "Healthy",
+    "advice": "Your grape vines are healthy. Maintain them with: 1. Soil care: Prefer well-drained soil with pH 5.5-6.5; test and amend with compost. 2. Planting and training: Plant in full sun; train on trellises (e.g., Geneva Double Curtain) for support and air flow. Space 6-10 feet apart. 3. Watering: Irrigate deeply (1 inch/week) during dry spells; mulch to conserve moisture. 4. Fertilization: Apply low-nitrogen fertilizers in spring; base on tests to avoid excess vigor. 5. Pruning: Prune heavily in dormancy to balance fruit and wood; remove suckers. 6. Monitoring: Scout for pests (e.g., phylloxera) and diseases; use IPM with pheromones. 7. Harvest: Pick clusters when sugars are optimal. Rotate varieties for diversity. Extension services can help with pruning demos and soil advice."
+  },
+  "Orange___Haunglongbing_(Citrus_greening)": {
+    "crop": "Orange",
+    "disease": "Huanglongbing (Citrus Greening)",
+    "advice": "Huanglongbing (HLB), caused by Candidatus Liberibacter asiaticus and spread by Asian citrus psyllid, causes mottled leaves, lopsided fruits, and tree decline in oranges. No cure exists, but management slows spread: 1. Vector control: Monitor and spray for psyllids with insecticides (e.g., imidacloprid soil drenches or foliar pyrethroids) in a area-wide program; rotate classes to prevent resistance. Use reflective mulch to repel psyllids. 2. Sanitation: Remove and destroy infected trees promptly to reduce inoculum; use certified disease-free nursery stock. 3. Nutritional enhancement: Apply enhanced foliar nutrition (e.g., micronutrients like manganese, zinc) to maintain productivity in infected trees. 4. Scouting: Inspect for yellow shoots, blotchy mottle on leaves, and small green fruits; use PCR tests for confirmation. 5. Cultural practices: Plant in well-drained soil; avoid stress from drought or flooding. 6. Research-based: Participate in regional HLB management programs; use tolerant rootstocks like Swingle. For organic, rely on biological controls like predatory insects. Consult citrus extension specialists for integrated strategies to sustain groves."
+  },
+  "Peach___Bacterial_spot": {
+    "crop": "Peach",
+    "disease": "Bacterial Spot",
+    "advice": "Bacterial spot, caused by Xanthomonas arboricola pv. pruni, leads to leaf spots, fruit lesions, and defoliation in peaches during wet weather. Management: 1. Cultural practices: Plant in sites with good air drainage; prune to open canopy. Avoid overhead irrigation; use drip. 2. Resistant varieties: Choose tolerant cultivars like Contender or Redhaven. 3. Sanitation: Remove and destroy infected twigs and fruits; disinfect tools. 4. Bactericide applications: Apply copper-based products (e.g., oxytetracycline where permitted) from shuck split to harvest, every 7-10 days in rainy periods. Rotate with antibiotics if available. 5. Monitoring: Scout for small, angular leaf spots and shot-hole symptoms; monitor weather for infection risk (warm, wet). 6. IPM: Maintain tree vigor with balanced nutrition. Organic options include copper soaps. Consult extension for spray timing to minimize resistance and fruit damage."
+  },
+  "Peach___healthy": {
+    "crop": "Peach",
+    "disease": "Healthy",
+    "advice": "Your peach trees are healthy. Keep them so with: 1. Soil management: Use well-drained soil (pH 6.0-7.0); test and fertilize accordingly. 2. Planting: Space 15-20 feet in full sun; choose self-fertile varieties. 3. Watering: Provide 1-2 inches/week; mulch for moisture retention. 4. Pruning: Prune to open vase shape in late winter for light penetration. 5. Nutrition: Apply nitrogen in split doses; include micronutrients. 6. Monitoring: Check for pests like aphids or diseases; use IPM. 7. Thinning: Thin fruits to 6-8 inches apart for size and health. Harvest ripe. Extension advice for chill hours and variety selection."
+  },
+  "Pepper,_bell___Bacterial_spot": {
+    "crop": "Bell Pepper",
+    "disease": "Bacterial Spot",
+    "advice": "Bacterial spot, caused by Xanthomonas campestris pv. vesicatoria, causes dark spots on leaves, stems, and fruits in bell peppers, worsened by warm, wet conditions. Control: 1. Seed treatment: Use hot water-treated or certified disease-free seeds. 2. Crop rotation: Rotate with non-solanaceous crops for 2-3 years. 3. Sanitation: Remove debris; disinfect tools and greenhouses. 4. Cultural practices: Stake plants for air flow; use drip irrigation; mulch to reduce splash. 5. Resistant varieties: Plant resistant hybrids with Bs genes. 6. Bactericides: Apply copper+mancozeb mixtures every 7 days during susceptible periods. 7. Monitoring: Scout for water-soaked spots; remove infected plants. Organic: Use copper-based products. Extension for local strains."
+  },
+  "Pepper,_bell___healthy": {
+    "crop": "Bell Pepper",
+    "disease": "Healthy",
+    "advice": "Your bell peppers are healthy. Maintain with: 1. Soil: Well-drained, pH 6.0-6.8; add compost. 2. Planting: Transplant after frost in full sun; space 18-24 inches. 3. Water: Consistent 1 inch/week; avoid foliage wetting. 4. Fertilizer: Balanced, side-dress with nitrogen. 5. Support: Stake or cage for heavy fruits. 6. Monitoring: Watch for pests/diseases; IPM. 7. Harvest: Pick green or colored. Rotate crops."
+  },
+  "Potato___Early_blight": {
+    "crop": "Potato",
+    "disease": "Early Blight",
+    "advice": "Early blight, caused by Alternaria solani, produces concentric ring spots on lower leaves, leading to defoliation in potatoes. Management: 1. Crop rotation: 3-4 years with non-solanaceous. 2. Resistant varieties: Choose like Defender. 3. Cultural: Mulch, space for air; irrigate at base. 4. Fungicides: Chlorothalonil or azoxystrobin from row closure, every 7-10 days. 5. Sanitation: Destroy debris. 6. Monitoring: Scout lower leaves. Organic: Copper. Extension for timing."
+  },
+  "Potato___Late_blight": {
+    "crop": "Potato",
+    "disease": "Late Blight",
+    "advice": "Late blight, caused by Phytophthora infestans, causes dark lesions and rapid tuber rot in cool, moist weather. Control: 1. Resistant varieties: Kennebec. 2. Cultural: Hill soil, good drainage; avoid overhead water. 3. Fungicides: Preventative like mancozeb, then curatives. Use forecasts. 4. Sanitation: Destroy infected plants/tubers. 5. Rotation: 3 years. 6. Monitoring: Daily in favorable weather. Organic: Copper. Use alerts from extension."
+  },
+  "Potato___healthy": {
+    "crop": "Potato",
+    "disease": "Healthy",
+    "advice": "Your potatoes are healthy. Sustain: 1. Soil: pH 5.0-6.0, well-drained; test. 2. Planting: Certified seed, 10-12 inches apart. 3. Water: Even moisture. 4. Fertilizer: High potassium. 5. Hilling: For tuber protection. 6. Monitoring: IPM. 7. Harvest: When tops die. Rotate."
+  },
+  "Raspberry___healthy": {
+    "crop": "Raspberry",
+    "disease": "Healthy",
+    "advice": "Your raspberries are healthy. Keep: 1. Soil: Acidic (5.5-6.5), drained. 2. Planting: Full sun, trellis. 3. Water: 1-2 inches/week. 4. Pruning: Annual for type. 5. Nutrition: Balanced. 6. Monitoring: Pests/diseases. 7. Harvest: Regular picking."
+  },
+  "Soybean___healthy": {
+    "crop": "Soybean",
+    "disease": "Healthy",
+    "advice": "Your soybeans are healthy. Maintain: 1. Soil: pH 6.0-7.0. 2. Planting: Inoculate seeds. 3. Water: During pod fill. 4. Fertilizer: Minimal nitrogen. 5. Weed control: Early. 6. Monitoring: IPM. 7. Harvest: At maturity. Rotate with corn."
+  },
+  "Squash___Powdery_mildew": {
+    "crop": "Squash",
+    "disease": "Powdery Mildew",
+    "advice": "Powdery mildew on squash, caused by Podosphaera xanthii, shows white powder on leaves, reducing yield. Management: 1. Cultural: Space plants, full sun; base water. 2. Resistant varieties: Like Success PM. 3. Fungicides: Sulfur or myclobutanil every 7 days. 4. Sanitation: Remove debris. 5. Monitoring: Early spots. Organic: Baking soda sprays. Extension for variety."
+  },
+  "Strawberry___Leaf_scorch": {
+    "crop": "Strawberry",
+    "disease": "Leaf Scorch",
+    "advice": "Leaf scorch, caused by Diplocarpon earlianum, causes purple spots turning brown on strawberry leaves. Control: 1. Sanitation: Remove old leaves. 2. Cultural: Air flow, drip irrigate. 3. Resistant: Like Allstar. 4. Fungicides: Captan post-harvest. 5. Rotation: 3 years. 6. Monitoring: Scout. Organic: Copper. Renovate beds."
+  },
+  "Strawberry___healthy": {
+    "crop": "Strawberry",
+    "disease": "Healthy",
+    "advice": "Your strawberries are healthy. Sustain: 1. Soil: pH 5.8-6.2, raised beds. 2. Planting: Crown level. 3. Water: Consistent. 4. Mulch: Straw for weeds. 5. Nutrition: Balanced. 6. Monitoring: IPM. 7. Renovation: After harvest."
+  },
+  "Tomato___Bacterial_spot": {
+    "crop": "Tomato",
+    "disease": "Bacterial Spot",
+    "advice": "Bacterial spot on tomato, Xanthomonas spp., causes spots on all parts. Management: 1. Seeds: Disease-free. 2. Rotation: 3 years. 3. Sanitation: Debris removal. 4. Cultural: Stake, mulch. 5. Resistant: Hybrids. 6. Copper sprays: Weekly. Monitoring: Early. Organic: Approved copper."
+  },
+  "Tomato___Early_blight": {
+    "crop": "Tomato",
+    "disease": "Early Blight",
+    "advice": "Early blight, Alternaria, ring spots. Control: 1. Rotation. 2. Mulch. 3. Prune lower leaves. 4. Fungicides: Every 7 days. 5. Resistant. 6. Sanitation. Monitoring."
+  },
+  "Tomato___Late_blight": {
+    "crop": "Tomato",
+    "disease": "Late Blight",
+    "advice": "Late blight, Phytophthora, rapid destruction. 1. Forecasts. 2. Preventative fungicides. 3. Remove infected. 4. Resistant. 5. Air flow. 6. No overhead water."
+  },
+  "Tomato___Leaf_Mold": {
+    "crop": "Tomato",
+    "disease": "Leaf Mold",
+    "advice": "Leaf mold, Fulvia fulva, yellow spots underside mold. Management: 1. Ventilation in greenhouses. 2. Prune. 3. Fungicides. 4. Resistant. 5. Humidity control. 6. Sanitation."
+  },
+  "Tomato___Septoria_leaf_spot": {
+    "crop": "Tomato",
+    "disease": "Septoria Leaf Spot",
+    "advice": "Septoria, small spots with pycnidia. Control: 1. Sanitation. 2. Mulch. 3. Fungicides. 4. Rotation. 5. Prune. 6. Monitoring."
+  },
+  "Tomato___Spider_mites Two-spotted_spider_mite": {
+    "crop": "Tomato",
+    "disease": "Spider Mites (Two-spotted Spider Mite)",
+    "advice": "Two-spotted spider mites cause stippling, webbing. Management: 1. Monitor with shaking. 2. Water sprays to dislodge. 3. Predatory mites. 4. Miticides if severe. 5. Avoid dust. 6. IPM. Organic: Oils."
+  },
+  "Tomato___Target_Spot": {
+    "crop": "Tomato",
+    "disease": "Target Spot",
+    "advice": "Target spot, Corynespora cassiicola, concentric rings. Control: 1. Sanitation. 2. Air circulation. 3. Fungicides. 4. Rotation. 5. Mulch. 6. Monitoring."
+  },
+  "Tomato___Tomato_Yellow_Leaf_Curl_Virus": {
+    "crop": "Tomato",
+    "disease": "Tomato Yellow Leaf Curl Virus",
+    "advice": "TYLCV, whitefly-transmitted, curling leaves. Management: 1. Whitefly control: Insecticides, nets. 2. Resistant varieties. 3. Remove weeds. 4. Rogue infected. 5. Monitoring traps. 6. IPM."
+  },
+  "Tomato___Tomato_mosaic_virus": {
+    "crop": "Tomato",
+    "disease": "Tomato Mosaic Virus",
+    "advice": "ToMV, mosaic patterns, stunting. Control: 1. Disease-free seeds. 2. Sanitation: Disinfect tools. 3. Resistant. 4. No smoking near plants. 5. Remove infected. 6. Monitoring."
+  },
+  "Tomato___healthy": {
+    "crop": "Tomato",
+    "disease": "Healthy",
+    "advice": "Healthy tomatoes. Maintain: 1. Soil pH 6.0-6.8. 2. Full sun. 3. Stake/prune. 4. Water base. 5. Balanced fertilizer. 6. IPM monitoring. 7. Harvest ripe."
+  },
+  "Non-plant": {
+    "crop": "Non-plant",
+    "disease": "Non-plant object",
+    "advice": "This image appears to be a non-plant object (e.g., laptop, tool, or unrelated item). Please upload a clear photo of a plant leaf for pest detection. Tip: Ensure good lighting and focus on affected areas."
+  }
+}

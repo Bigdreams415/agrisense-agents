@@ -1,0 +1,16 @@
+{
+  "contractId": "0.0.8323760",
+  "transactionId": "0.0.6537386@1774142040.440461435",
+  "asaiContractId": "0.0.8323752",
+  "asaiTokenAddress": "0x00000000000000000000000000000000007f02a8",
+  "backendAddress": "0x91b2b63ca5abc2a1cdb78acb010fb03e2d946eb9",
+  "operatorId": "0.0.6537386",
+  "artifactPath": "/Users/bigdreams/Workspace/agrisense-agents/smart-contracts/artifacts/contracts/PestReward.sol/PestReward.json",
+  "gas": 1500000,
+  "constructor": {
+    "asaiTokenAddress": "0x00000000000000000000000000000000007f02a8",
+    "backendAddress": "0x91b2b63ca5abc2a1cdb78acb010fb03e2d946eb9"
+  },
+  "timestamp": "2026-03-22T01:14:10.141Z",
+  "network": "testnet"
+}
