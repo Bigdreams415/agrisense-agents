@@ -16,7 +16,8 @@ class NasaClient:
         self.password = os.getenv("EARTHDATA_PASSWORD")
         if not self.username or not self.password:
             raise ValueError("EARTHDATA_USERNAME and EARTHDATA_PASSWORD must be set in .env")
-        earthaccess.login()   
+        # earthaccess reads EARTHDATA_* vars from environment in recent versions.
+        earthaccess.login(strategy="environment")
         self.download_folder = "nasa_data"
         os.makedirs(self.download_folder, exist_ok=True)
 
