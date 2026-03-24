@@ -10,7 +10,7 @@
 [![React](https://img.shields.io/badge/React-TypeScript-61DAFB?style=for-the-badge&logo=react)](https://reactjs.org)
 [![Gemini](https://img.shields.io/badge/Gemini-2.0_Flash-4285F4?style=for-the-badge&logo=google)](https://ai.google.dev)
 
-**[🚀 Live Demo](https://agri-sense-ai-plum.vercel.app) · [🎬 Demo Video](https://youtu.be/Lq_KbfINthI) · [📊 Pitch Deck](#)**
+**[🚀 Live Demo](https://agrisense-agents.vercel.app) · [🎬 Demo Video](https://youtu.be/Gq1DeSbOIIU) · [📊 Pitch Deck](#)**
 
 > *Africa's smallholder farmers lose 40–50% of harvests to preventable pests, droughts, and data gaps — over $10B annually. AgriSense AI deploys a network of autonomous AI agents that think, decide, and act on behalf of farmers — detecting diseases, reasoning over satellite data, and triggering insurance payouts automatically. Every agent decision is logged immutably on Hedera HCS, creating the world's first fully auditable autonomous agricultural economy.*
 
@@ -37,7 +37,7 @@
 
 ## 🤖 The Agent Architecture
 
-AgriSense AI v2.0 transforms from a reactive ML platform into a **network of autonomous AI agents** that coordinate through Hedera HCS. Each agent has a defined role, dedicated HCS topic, and acts independently — without requiring a human to trigger every decision.
+AgriSense AI v1 introduces a **network of autonomous AI agents** that coordinate through Hedera HCS. Each agent has a defined role, a dedicated HCS topic, and can act independently without requiring a human to trigger every decision.
 
 ### The Four Agents
 
@@ -63,14 +63,8 @@ Every agent action — detection, advice, oracle decision, insurance trigger —
 
 ---
 
-## ✨ What Makes This Different
+## ✨ How The Agent System Works
 
-### Before (v1 — Reactive System)
-```
-Farmer uploads image → CNN detects disease → hardcoded advice returned → logged to HCS
-```
-
-### After (v2 — Agent System)
 ```
 CropWatchAgent wakes autonomously
   → calls satellite tool → NDVI computed
@@ -95,98 +89,58 @@ InsuranceOracleAgent (running every 6 hours)
 
 ## 🏗️ System Architecture Diagram
 
-```
-┌─────────────────────────────────────────────────────────────────────┐
-│                        AGRISENSE AI v2.0                            │
-│                   Multi-Agent Architecture                          │
-└─────────────────────────────────────────────────────────────────────┘
+```mermaid
+flowchart TB
+  PHONE["Smartphone Camera"]
+  DRONE["Drone RTSP/RTMP"]
+  SATI["Satellite NDVI"]
+  IOT["IoT MQTT"]
 
-  FARMER INTERFACES
-  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐
-  │Smartphone│  │  Drone   │  │Satellite │  │   IoT    │
-  │  Camera  │  │ RTSP/RTMP│  │  NDVI    │  │  MQTT    │
-  └────┬─────┘  └────┬─────┘  └────┬─────┘  └────┬─────┘
-       │              │              │               │
-       └──────────────┴──────────────┴───────────────┘
-                              │
-                    ┌─────────▼──────────┐
-                    │   React TypeScript  │
-                    │     Frontend        │
-                    │  (Vercel Deployed)  │
-                    └─────────┬──────────┘
-                              │ HTTP / WebSocket
-                    ┌─────────▼──────────┐
-                    │   FastAPI Backend   │
-                    │    main.py v2.0     │
-                    │  (/predict /agent   │
-                    │   /yield /irrigate) │
-                    └─────────┬──────────┘
-                              │
-          ┌───────────────────┼───────────────────┐
-          │                   │                   │
-  ┌───────▼───────┐  ┌───────▼───────┐  ┌───────▼───────┐
-  │  ORCHESTRATOR │  │  AI MODELS    │  │   SATELLITE   │
-  │  (Master Agent│  │               │  │   ENGINE      │
-  │   Coordinator)│  │ CNN EfficientB│  │               │
-  └───────┬───────┘  │ Yield RF Model│  │ NASA HLS S30  │
-          │          │ Irrigation RF  │  │ NDVI + NDWI   │
-  ┌───────┴───────────────────────┐  │  │ Cloud Masking │
-  │         AGENT LAYER           │  └──┘ └───────────────┘
-  │                               │
-  │  ┌─────────────────────────┐  │
-  │  │    CropWatchAgent       │  │
-  │  │  Satellite Monitoring   │  │
-  │  │  NDVI/NDWI Analysis     │  │
-  │  └────────────┬────────────┘  │
-  │               │               │
-  │  ┌────────────▼────────────┐  │
-  │  │    AdvisoryAgent        │  │
-  │  │  CNN Disease Detection  │  │
-  │  │  Gemini 2.0 Flash LLM   │  │
-  │  │  Contextual Farm Advice │  │
-  │  └────────────┬────────────┘  │
-  │               │               │
-  │  ┌────────────▼────────────┐  │
-  │  │  InsuranceOracleAgent   │  │
-  │  │  AUTONOMOUS LOOP        │  │
-  │  │  Polls every 6 hours    │  │
-  │  │  NDVI threshold check   │  │
-  │  │  Auto-triggers payout   │  │
-  │  └────────────┬────────────┘  │
-  │               │               │
-  │  ┌────────────▼────────────┐  │
-  │  │  DataMarketplaceAgent   │  │
-  │  │  ASAI Token Rewards     │  │
-  │  │  NFT Minting per event  │  │
-  │  └─────────────────────────┘  │
-  └───────────────┬───────────────┘
-                  │ HTTP POST /log
-       ┌──────────▼───────────┐
-       │  Node.js Hashgraph   │
-       │     Logger v2.0      │
-       │  (Port 4000)         │
-       └──────────┬───────────┘
-                  │
-    ┌─────────────┼─────────────────────┐
-    │             │                     │
-┌───▼───┐   ┌────▼────┐   ┌────────────▼──────────┐
-│  HCS  │   │   HTS   │   │         HSCS          │
-│       │   │         │   │                       │
-│ 4 Agent│  │ ASAI    │   │  PestReward Contract  │
-│ Topics│  │ Token   │   │  CropInsurance Contract│
-│ Signed│  │ Rewards │   │  ASAI Token Contract  │
-│ Msgs  │  │ 1 ASAI  │   │                       │
-│       │  │ per scan│   │  Auto HBAR payout on  │
-│Immuta-│  │         │   │  drought detection    │
-│ble    │  │ NFT mint│   │                       │
-│Audit  │  │ per event│  │  recordPestDetection()│
-│Trail  │  │ to IPFS │   │  processInsurance     │
-│       │  │ Pinata  │   │  Claim()              │
-└───────┘  └─────────┘   └───────────────────────┘
-    │
-    └── Hedera Testnet Explorer (publicly auditable)
-        Each agent has its own topic ID
-        Any farmer can verify agent decisions on-chain
+  FE["React TypeScript Frontend<br/>(Vercel Deployed)"]
+  API["FastAPI Backend<br/>main.py<br/>(/predict /agent /yield /irrigate)"]
+
+  ORCH["Orchestrator<br/>(Master Agent Coordinator)"]
+  MODELS["AI Models<br/>CNN EfficientB<br/>Yield RF Model<br/>Irrigation RF"]
+  SATE["Satellite Engine<br/>NASA HLS S30<br/>NDVI + NDWI<br/>Cloud Masking"]
+
+  subgraph AGENTS["Agent Layer"]
+    CW["CropWatchAgent<br/>Satellite Monitoring<br/>NDVI/NDWI Analysis"]
+    ADV["AdvisoryAgent<br/>CNN Disease Detection<br/>Gemini 2.0 Flash LLM<br/>Contextual Farm Advice"]
+    INS["InsuranceOracleAgent<br/>Autonomous Loop<br/>Polls every 6 hours<br/>NDVI threshold check<br/>Auto-triggers payout"]
+    MKT["DataMarketplaceAgent<br/>ASAI Token Rewards<br/>NFT Minting per event"]
+  end
+
+  LOGGER["Node.js Hashgraph Logger<br/>(Port 4000)"]
+
+  HCS["HCS<br/>4 Agent Topics<br/>Signed Messages<br/>Immutable Audit Trail"]
+  HTS["HTS<br/>ASAI Token Rewards<br/>1 ASAI per scan<br/>NFT mint to IPFS Pinata"]
+  HSCS["HSCS<br/>PestReward Contract<br/>CropInsurance Contract<br/>ASAI Token Contract<br/>recordPestDetection()<br/>processInsuranceClaim()"]
+
+  EXPLORER["Hedera Testnet Explorer<br/>(Publicly Auditable)"]
+
+  PHONE --> FE
+  DRONE --> FE
+  SATI --> FE
+  IOT --> FE
+
+  FE -->|"HTTP / WebSocket"| API
+
+  API --> ORCH
+  API --> MODELS
+  API --> SATE
+
+  ORCH --> CW
+  ORCH --> ADV
+  ORCH --> INS
+  ORCH --> MKT
+
+  AGENTS -->|"HTTP POST /log"| LOGGER
+
+  LOGGER --> HCS
+  LOGGER --> HTS
+  LOGGER --> HSCS
+
+  HCS --> EXPLORER
 ```
 
 ---
@@ -196,10 +150,10 @@ InsuranceOracleAgent (running every 6 hours)
 ```
 agrisense-agents/
 │
-├── main.py                          # FastAPI entry point — clean, thin, v2.0
+├── main.py                          # FastAPI entry point — clean and modular
 ├── requirements.txt                 # Python dependencies
 │
-├── agents/                          # 🤖 The Agent Layer (NEW in v2.0)
+├── agents/                          # 🤖 The Agent Layer
 │   ├── orchestrator.py              # Master agent — coordinates all sub-agents
 │   ├── advisory_agent.py            # Gemini 2.0 Flash — dynamic contextual advice
 │   ├── insurance_oracle_agent.py    # Autonomous loop — monitors NDVI, triggers payouts
@@ -398,40 +352,24 @@ When all three are met, the agent calls `processInsuranceClaim()` which:
 
 ### Insurance Claim Flow (Fully Autonomous)
 
-```
-InsuranceOracleAgent (every 6 hours)
-         │
-         ▼
-  Pull NASA HLS satellite data
-         │
-         ▼
-  Compute NDVI + NDWI bands
-         │
-         ▼
-  Evaluate conditions:
-  ┌─────────────────────────────┐
-  │  NDVI < 20%?           ✓   │
-  │  vegetation == "poor"? ✓   │
-  │  drought == "high"?    ✓   │
-  └────────────┬────────────────┘
-               │ ALL MET
-               ▼
-  checkInsuranceEligibility()
-  → policy active? not claimed this season?
-               │
-               ▼
-  checkContractBalanceAndPayout()
-  → sufficient HBAR in contract?
-               │
-               ▼
-  processInsuranceClaim()
-  → ContractExecuteTransaction
-  → HBAR transferred to farmer
-  → policy marked claimed
-               │
-               ▼
-  Decision logged to HCS (Insurance topic)
-  NFT minted with claim proof on IPFS
+```mermaid
+flowchart TD
+    START["InsuranceOracleAgent<br/>(runs every 6 hours)"]
+    NASA["Pull NASA HLS satellite data"]
+    NDVI["Compute NDVI + NDWI bands"]
+    RULES{"NDVI < 20%<br/>AND vegetation = poor<br/>AND drought = high?"}
+
+    ELIG["checkInsuranceEligibility()<br/>policy active and not claimed this season"]
+    BAL["checkContractBalanceAndPayout()<br/>sufficient HBAR in contract"]
+    CLAIM["processInsuranceClaim()<br/>ContractExecuteTransaction<br/>HBAR transferred to farmer<br/>policy marked claimed"]
+    LOG["Decision logged to HCS (Insurance topic)"]
+    NFT["NFT minted with claim proof on IPFS"]
+
+    WAIT["No payout this cycle<br/>continue autonomous monitoring"]
+
+    START --> NASA --> NDVI --> RULES
+    RULES -- "Yes" --> ELIG --> BAL --> CLAIM --> LOG --> NFT
+    RULES -- "No" --> WAIT
 ```
 
 ---

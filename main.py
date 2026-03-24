@@ -80,7 +80,7 @@ app.include_router(agent_router)
 async def root():
     return {
         "message": "AgriSense AI Multi-Agent Backend",
-        "version": "2.0.0",
+        "version": "1.0.0",
         "status": "active",
         "agents": [
             "CropWatchAgent",
@@ -96,5 +96,5 @@ async def health():
     return {
         "status": "ok",
         "message": "AgriSense AI backend is running",
-        "version": "2.0.0",
+        "version": "1.0.0",
     }
