@@ -3,6 +3,7 @@ import base64
 import logging
 import asyncio
 import subprocess
+import os
 from datetime import datetime
 from io import BytesIO
 from typing import Optional
@@ -11,6 +12,12 @@ import httpx
 from fastapi import APIRouter, BackgroundTasks, HTTPException, WebSocket, WebSocketDisconnect
 
 from core.schemas import DroneConnectRequest, JobCreateRequest
+
+BACKEND_URL = (os.getenv("BACKEND_URL") or "http://localhost:8000").rstrip("/")
+WS_BASE_URL = (
+    os.getenv("WS_BASE_URL")
+    or BACKEND_URL.replace("https://", "wss://").replace("http://", "ws://")
+).rstrip("/")
 
 router = APIRouter()
 logger = logging.getLogger(__name__)
@@ -73,7 +80,7 @@ async def create_job(request: JobCreateRequest, background_tasks: BackgroundTask
     }
 
     background_tasks.add_task(start_frame_loop, job_id)
-    ws_url = f"ws://127.0.0.1:8000/ws/jobs/{job_id}"
+    ws_url = f"{WS_BASE_URL}/ws/jobs/{job_id}"
     return {"job_id": job_id, "ws_url": ws_url, "status": "started"}
 
 
@@ -179,7 +186,7 @@ async def _call_predict(frame_file: BytesIO, drone_id: str, job_id: str, timesta
         frame_file.seek(0)
         async with httpx.AsyncClient() as client:
             response = await client.post(
-                "http://127.0.0.1:8000/predict",
+                f"{BACKEND_URL}/predict",
                 files={"file": ("drone_frame.jpg", frame_file, "image/jpeg")},
                 data={"farmer_id": farmer_id},
                 timeout=30.0,

@@ -5,7 +5,7 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from core.config import FAILED_DIR, LOG_FILE
+from core.config import FAILED_DIR, LOG_FILE, CORS_ALLOW_ORIGINS
 from models.loaders import (
     load_pest_model,
     load_class_indices,
@@ -53,16 +53,13 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(
     title="AgriSense AI — Multi-Agent Backend",
-    version="2.0.0",
+    version="1.0.0",
     lifespan=lifespan,
 )
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:3000",
-        "https://agri-sense-ai-plum.vercel.app",
-    ],
+    allow_origins=CORS_ALLOW_ORIGINS,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

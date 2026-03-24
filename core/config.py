@@ -5,10 +5,23 @@ load_dotenv()
 
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 AZURE_STORAGE_CONNECTION_STRING = os.getenv("AZURE_STORAGE_CONNECTION_STRING")
-HASGRAPH_URL = os.getenv("HASGRAPH_URL", "http://localhost:4000/log")
+
+# Accept both legacy HASGRAPH_URL and HASHGRAPH_URL env names.
+_hashgraph_base = os.getenv("HASHGRAPH_URL")
+_hasgraph_explicit = os.getenv("HASGRAPH_URL")
+HASGRAPH_URL = (_hasgraph_explicit or (_hashgraph_base.rstrip("/") + "/log" if _hashgraph_base else "http://localhost:4000/log"))
 EARTHDATA_USERNAME = os.getenv("EARTHDATA_USERNAME")
 EARTHDATA_PASSWORD = os.getenv("EARTHDATA_PASSWORD")
 BROKER_TYPE = os.getenv("BROKER_TYPE", "cloud")
+CORS_ALLOW_ORIGINS = [
+	origin.strip()
+	for origin in os.getenv(
+		"CORS_ALLOW_ORIGINS",
+		"http://localhost:3000,https://agrisense-agents.vercel.app",
+	).split(",")
+	if origin.strip()
+]
+LOCAL_MQTT_BROKER = os.getenv("LOCAL_MQTT_BROKER", "localhost")
 
 CNN_AZURE_URL = os.getenv("CNN_AZURE_URL") or os.getenv("AZURE_MODEL_URL")
 YIELD_AZURE_URL = os.getenv("YIELD_AZURE_URL")

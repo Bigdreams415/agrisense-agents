@@ -16,6 +16,7 @@ const app = express();
 app.use(bodyParser.json());
 
 const PORT = process.env.PORT || 4000;
+const SERVICE_URL = process.env.HASHGRAPH_URL || `http://localhost:${PORT}`;
 
 app.get("/health", (req, res) => {
     res.json({
@@ -78,5 +79,5 @@ app.post("/associate", async (req, res) => {
 });
 
 app.listen(PORT, "0.0.0.0", () => {
-    console.log(`AgriSense Hashgraph Logger running on http://localhost:${PORT}`);
+    console.log(`AgriSense Hashgraph Logger running on ${SERVICE_URL}`);
 });

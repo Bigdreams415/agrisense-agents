@@ -4,12 +4,13 @@ import os
 from datetime import datetime
 from typing import Dict
 import asyncio
+from core.config import LOCAL_MQTT_BROKER
 
 hardware_detection_requests: Dict[str, asyncio.Future] = {}
 
 CLOUD_BROKER = "broker.hivemq.com"
 CLOUD_PORT = 1883
-LOCAL_BROKER = "localhost"
+LOCAL_BROKER = LOCAL_MQTT_BROKER
 LOCAL_PORT = 1883
 
 FARM_TOPIC_PREFIX = "agrisenseai/farms"
