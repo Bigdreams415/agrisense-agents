@@ -1,145 +1,107 @@
-// src/components/homepage/ProblemSection.tsx
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
+const problems = [
+  {
+    icon: '🐛',
+    title: 'Reactive diagnostics arrive too late',
+    description:
+      'Many farms detect disease only after visible spread. Delayed response increases treatment cost and reduces harvest quality.',
+    stat: '40-50%',
+    statText: 'harvest loss from preventable risks',
+  },
+  {
+    icon: '🌡️',
+    title: 'Drought stress is often invisible',
+    description:
+      'Without continuous vegetation tracking, farmers miss early warning signals and irrigation decisions happen after severe decline.',
+    stat: 'High',
+    statText: 'risk exposure in rain-dependent regions',
+  },
+  {
+    icon: '🧾',
+    title: 'Insurance claims are trust-heavy and slow',
+    description:
+      'Manual workflows and fragmented evidence delay payouts when farmers need support the most during extreme weather seasons.',
+    stat: 'Weeks',
+    statText: 'typical delay in traditional claim cycles',
+  },
+  {
+    icon: '🔒',
+    title: 'Critical farm decisions lack audit trails',
+    description:
+      'Predictions, recommendations, and payouts are rarely linked in a transparent timeline that stakeholders can independently verify.',
+    stat: 'Low',
+    statText: 'traceability across decision systems',
+  },
+];
+
 const ProblemSection: React.FC = () => {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
-
-  const problems = [
-    {
-      icon: '🐛',
-      title: 'Pest & Disease Devastation',
-      description: 'Farmers lose up to 40% of their crops to pests and diseases annually, with traditional detection methods being too slow and inaccurate.',
-      stat: '$220B',
-      statText: 'Annual global crop losses'
-    },
-    {
-      icon: '🌡️',
-      title: 'Climate Change Impact',
-      description: 'Unpredictable weather patterns and droughts make farming increasingly risky, with insurance claims taking months to process.',
-      stat: '70%',
-      statText: 'Of farmers affected by climate change'
-    },
-    {
-      icon: '💸',
-      title: 'Financial Instability',
-      description: 'Farmers struggle with cash flow between seasons and lack access to modern financial tools that could help them grow.',
-      stat: '500M',
-      statText: 'Small farms lack access to credit'
-    },
-    {
-      icon: '📊',
-      title: 'Data Silos & Inefficiency',
-      description: 'Valuable farm data remains unused and siloed, preventing farmers from making data-driven decisions that could optimize yields.',
-      stat: '80%',
-      statText: 'Of farm data goes unanalyzed'
-    }
-  ];
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut" as const
-      }
-    }
-  };
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
   return (
-    <section id="problem" className="py-20 bg-white dark:bg-gray-900 relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 1px 1px, rgba(0,0,0,0.1) 1px, transparent 0)`,
-          backgroundSize: '50px 50px'
-        }}></div>
-      </div>
+    <section id="problem" className="relative overflow-hidden bg-[#0a0f0a] py-24">
+      <div
+        className="absolute inset-0 opacity-[0.04]"
+        style={{
+          backgroundImage:
+            'linear-gradient(#ef4444 1px, transparent 1px), linear-gradient(90deg, #ef4444 1px, transparent 1px)',
+          backgroundSize: '68px 68px',
+        }}
+      />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
         <motion.div
           ref={ref}
-          initial="hidden"
-          animate={inView ? "visible" : "hidden"}
-          variants={containerVariants}
-          className="text-center mb-16"
+          initial={{ opacity: 0, y: 40 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.7 }}
+          className="mb-16"
         >
-          <motion.h2 
-            variants={itemVariants}
-            className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4"
-          >
-            The <span className="text-red-600">Challenges</span> Modern Farmers Face
-          </motion.h2>
-          <motion.p 
-            variants={itemVariants}
-            className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto"
-          >
-            Traditional farming methods are no longer sufficient in today's rapidly changing agricultural landscape. 
-            Farmers need smarter solutions to overcome these critical challenges.
-          </motion.p>
+          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-rose-400">The Challenge</p>
+          <h2 className="max-w-3xl text-4xl font-bold leading-tight text-white sm:text-5xl" style={{ fontFamily: 'Syne, sans-serif' }}>
+            Farmers face compounding risks without coordinated intelligence.
+          </h2>
         </motion.div>
 
-        <motion.div
-          initial="hidden"
-          animate={inView ? "visible" : "hidden"}
-          variants={containerVariants}
-          className="grid grid-cols-1 md:grid-cols-2 gap-8"
-        >
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           {problems.map((problem, index) => (
             <motion.div
-              key={index}
-              variants={itemVariants}
-              whileHover={{ 
-                y: -5,
-                transition: { duration: 0.2 }
-              }}
-              className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700"
+              key={problem.title}
+              initial={{ opacity: 0, y: 34 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: index * 0.12 }}
+              className="rounded-2xl border border-white/10 bg-white/[0.03] p-8 transition-colors duration-300 hover:bg-white/[0.06] hover:border-white/20"
             >
-              <div className="flex items-start space-x-4">
-                <div className="text-4xl">{problem.icon}</div>
-                <div className="flex-1">
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+              <div className="flex items-start gap-5">
+                <div className="mt-1 text-3xl">{problem.icon}</div>
+                <div>
+                  <h3 className="mb-2 text-lg font-bold text-white" style={{ fontFamily: 'Syne, sans-serif' }}>
                     {problem.title}
                   </h3>
-                  <p className="text-gray-600 dark:text-gray-300 mb-4">
-                    {problem.description}
-                  </p>
-                  <div className="flex items-center space-x-2">
-                    <span className="text-2xl font-bold text-red-600">{problem.stat}</span>
-                    <span className="text-sm text-gray-500 dark:text-gray-400">{problem.statText}</span>
+                  <p className="mb-4 text-sm leading-relaxed text-gray-400">{problem.description}</p>
+                  <div className="flex items-center gap-3">
+                    <span className="text-2xl font-bold text-rose-400" style={{ fontFamily: 'Syne, sans-serif' }}>
+                      {problem.stat}
+                    </span>
+                    <span className="text-xs text-gray-500">{problem.statText}</span>
                   </div>
                 </div>
               </div>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
 
-        {/* Callout Box */}
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="mt-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-2xl p-8 text-center text-white"
+          initial={{ opacity: 0, y: 28 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.55 }}
+          className="mt-12 rounded-2xl border border-red-900/40 bg-gradient-to-r from-red-950/40 to-orange-950/30 p-8 text-center"
         >
-          <h3 className="text-2xl font-bold mb-2">The Urgent Need for Innovation</h3>
-          <p className="text-lg opacity-90">
-            Without modern solutions, these challenges will continue to threaten global food security and farmer livelihoods.
+          <p className="mb-2 text-lg font-semibold text-white">The data exists. Coordination is the missing layer.</p>
+          <p className="text-sm text-gray-300">
+            AgriSense AI closes the loop by coordinating specialized agents and writing every material decision to Hedera for traceable trust.
           </p>
         </motion.div>
       </div>

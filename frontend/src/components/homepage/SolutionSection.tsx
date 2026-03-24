@@ -1,193 +1,146 @@
-// src/components/homepage/SolutionSection.tsx
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
+const solutions = [
+  {
+    layer: '01',
+    icon: '🛰️',
+    title: 'CropWatchAgent',
+    sub: 'Satellite Monitoring Agent',
+    description:
+      'Continuously interprets NDVI and NDWI from NASA HLS imagery to classify vegetation health and drought pressure for farm boundaries.',
+    features: ['NASA HLS integration', 'Vegetation index analysis', 'Drought classification', 'HCS decision logging'],
+    accentBg: 'bg-cyan-900/20',
+    accentText: 'text-cyan-300',
+    accentBorder: 'border-cyan-800/40',
+  },
+  {
+    layer: '02',
+    icon: '🧠',
+    title: 'AdvisoryAgent',
+    sub: 'Contextual Intelligence Agent',
+    description:
+      'Combines disease detections with farm-level risk context to generate practical treatment and prevention guidance through Gemini.',
+    features: ['Disease-aware advice', 'Context injection from satellite signals', 'Actionable treatment plans', 'Advisory topic proofs'],
+    accentBg: 'bg-emerald-900/20',
+    accentText: 'text-emerald-300',
+    accentBorder: 'border-emerald-800/40',
+  },
+  {
+    layer: '03',
+    icon: '🛡️',
+    title: 'InsuranceOracleAgent',
+    sub: 'Autonomous Claims Agent',
+    description:
+      'Runs scheduled risk checks and executes smart contract insurance logic when threshold conditions indicate severe agricultural stress.',
+    features: ['Scheduled autonomous checks', 'On-chain claim execution', 'Eligibility and payout checks', 'Insurance HCS audit trail'],
+    accentBg: 'bg-amber-900/20',
+    accentText: 'text-amber-300',
+    accentBorder: 'border-amber-800/40',
+  },
+  {
+    layer: '04',
+    icon: '🪙',
+    title: 'DataMarketplaceAgent',
+    sub: 'Rewards and Provenance Agent',
+    description:
+      'Distributes ASAI token incentives and mints NFT evidence so every meaningful data contribution becomes a verifiable digital asset.',
+    features: ['ASAI reward distribution', 'NFT proof minting', 'HTS transfer flow', 'Marketplace topic ledgering'],
+    accentBg: 'bg-fuchsia-900/20',
+    accentText: 'text-fuchsia-300',
+    accentBorder: 'border-fuchsia-800/40',
+  },
+];
+
 const SolutionSection: React.FC = () => {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
-
-  const solutions = [
-    {
-      icon: '🤖',
-      title: 'AI-Powered Insights',
-      description: 'Advanced computer vision algorithms analyze drone and satellite imagery to detect pests, diseases, and crop health issues with 95% accuracy.',
-      features: ['Real-time pest detection', 'Vegetation health monitoring', 'Predictive analytics'],
-      color: 'from-blue-500 to-blue-600',
-      bgColor: 'blue'
-    },
-    {
-      icon: '💰',
-      title: 'Economic Empowerment',
-      description: 'Earn ASAI tokens for sustainable practices, trade crop prediction NFTs, and access decentralized insurance with instant payouts.',
-      features: ['Token rewards system', 'Crop prediction marketplace', 'Automated insurance'],
-      color: 'from-green-500 to-green-600',
-      bgColor: 'green'
-    },
-    {
-      icon: '⛓️',
-      title: 'DePIN Innovation',
-      description: 'Rent drones and IoT sensors through our decentralized physical infrastructure network, with all data secured on Hedera blockchain.',
-      features: ['Equipment rental marketplace', 'Tamper-proof records', 'Smart contract automation'],
-      color: 'from-purple-500 to-purple-600',
-      bgColor: 'purple'
-    }
-  ];
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.3
-      }
-    }
-  };
-
-  const cardVariants = {
-    hidden: { 
-      opacity: 0, 
-      y: 60, 
-      scale: 0.9 
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      transition: {
-        duration: 0.7,
-        ease: "easeOut" as const
-      }
-    }
-  };
-
-  const headerVariants = {
-    hidden: { 
-      opacity: 0, 
-      y: 40 
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut" as const
-      }
-    }
-  };
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.08 });
 
   return (
-    <section id="solution" className="py-20 bg-gradient-to-br from-gray-50 to-green-50 dark:from-gray-800 dark:to-gray-900 relative overflow-hidden">
-      {/* Subtle background pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 25% 25%, #10B981 0%, transparent 50%)`,
-          backgroundSize: '50px 50px'
-        }}></div>
-      </div>
+    <section id="solution" className="relative overflow-hidden bg-[#05100c] py-24">
+      <div className="pointer-events-none absolute left-1/2 top-0 h-[420px] w-[820px] -translate-x-1/2 rounded-full bg-emerald-900/20 blur-3xl" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Section Header */}
+      <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
         <motion.div
           ref={ref}
-          initial="hidden"
-          animate={inView ? "visible" : "hidden"}
-          variants={containerVariants}
-          className="text-center mb-16"
+          initial={{ opacity: 0, y: 40 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.7 }}
+          className="mb-16 text-center"
         >
-          <motion.h2 
-            variants={headerVariants}
-            className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4"
+          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-emerald-400">The Solution</p>
+          <h2
+            className="mx-auto max-w-3xl text-4xl font-bold leading-tight text-white sm:text-5xl"
+            style={{ fontFamily: 'Syne, sans-serif' }}
           >
-            Our <span className="text-green-600">Triple-Threat</span> Solution
-          </motion.h2>
-          <motion.p 
-            variants={headerVariants}
-            className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto"
-          >
-            AgriSense AI combines cutting-edge AI, economic innovation, and decentralized infrastructure 
-            to create the most comprehensive farming platform ever built.
-          </motion.p>
+            A coordinated multi-agent architecture for resilient farming.
+          </h2>
+          <p className="mx-auto mt-6 max-w-2xl text-lg text-gray-400">
+            Each agent has a clear role, dedicated Hedera topic, and measurable impact in the full farm decision pipeline.
+          </p>
         </motion.div>
 
-        {/* Solution Cards */}
-        <motion.div
-          initial="hidden"
-          animate={inView ? "visible" : "hidden"}
-          variants={containerVariants}
-          className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16"
-        >
+        <div className="space-y-6">
           {solutions.map((solution, index) => (
             <motion.div
-              key={index}
-              variants={cardVariants}
-              whileHover={{ 
-                y: -8,
-                scale: 1.02,
-                transition: { duration: 0.3 }
-              }}
-              className="group relative"
+              key={solution.title}
+              initial={{ opacity: 0, x: index % 2 === 0 ? -34 : 34 }}
+              animate={inView ? { opacity: 1, x: 0 } : {}}
+              transition={{ duration: 0.65, delay: index * 0.15 }}
+              className={`relative overflow-hidden rounded-2xl border ${solution.accentBorder} bg-white/[0.03] p-8 transition-colors duration-300 hover:bg-white/[0.05]`}
             >
-              {/* Gradient Border Effect */}
-              <div className={`absolute inset-0 bg-gradient-to-r ${solution.color} rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm`}></div>
-              
-              <div className="relative bg-white dark:bg-gray-800 rounded-2xl p-8 h-full border border-gray-200 dark:border-gray-700 group-hover:border-transparent transition-all duration-300">
-                {/* Icon */}
-                <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-${solution.bgColor}-100 dark:bg-${solution.bgColor}-900/30 text-2xl mb-6`}>
-                  {solution.icon}
+              <div className="absolute right-8 top-8 select-none text-7xl font-bold text-white/[0.03]" style={{ fontFamily: 'Syne, sans-serif' }}>
+                {solution.layer}
+              </div>
+
+              <div className="relative z-10 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:items-center">
+                <div>
+                  <div className="mb-4 flex items-center gap-4">
+                    <div className={`flex h-12 w-12 items-center justify-center rounded-xl text-2xl ${solution.accentBg}`}>
+                      {solution.icon}
+                    </div>
+                    <div>
+                      <div className="text-xs uppercase tracking-[0.2em] text-gray-500">{solution.sub}</div>
+                      <h3 className="text-xl font-bold text-white" style={{ fontFamily: 'Syne, sans-serif' }}>
+                        {solution.title}
+                      </h3>
+                    </div>
+                  </div>
+                  <p className="text-sm leading-relaxed text-gray-400">{solution.description}</p>
                 </div>
 
-                {/* Title */}
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-                  {solution.title}
-                </h3>
-
-                {/* Description */}
-                <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-                  {solution.description}
-                </p>
-
-                {/* Features */}
-                <ul className="space-y-2">
-                  {solution.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-700 dark:text-gray-300">
-                      <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
-                      {feature}
-                    </li>
+                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+                  {solution.features.map((feature) => (
+                    <div key={feature} className="flex items-center gap-2 text-sm text-gray-300">
+                      <i className={`fas fa-check-circle text-xs ${solution.accentText}`} />
+                      <span>{feature}</span>
+                    </div>
                   ))}
-                </ul>
-
-                {/* Bottom Gradient Bar */}
-                <div className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${solution.color} rounded-b-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300`}></div>
+                </div>
               </div>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
 
-        {/* Integration Callout */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
-          transition={{ duration: 0.6, delay: 0.9 }}
-          className="bg-white dark:bg-gray-800 rounded-2xl p-8 border border-green-200 dark:border-green-800 text-center"
+          initial={{ opacity: 0, y: 24 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.7, delay: 0.7 }}
+          className="mt-12 rounded-2xl border border-emerald-900/40 bg-gradient-to-r from-emerald-950/60 to-cyan-950/40 p-8"
         >
-          <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-            Seamless Integration, Maximum Impact
-          </h3>
-          <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
-            All three components work together to create a powerful ecosystem that benefits farmers, 
-            investors, and the entire agricultural supply chain.
-          </p>
-          <div className="flex justify-center items-center space-x-8 text-sm text-gray-500 dark:text-gray-400">
-            <span>🤖 AI Analysis</span>
-            <span className="text-green-500">→</span>
-            <span>💰 Token Rewards</span>
-            <span className="text-green-500">→</span>
-            <span>⛓️ Blockchain Security</span>
-            <span className="text-green-500">→</span>
-            <span>📈 Better Yields</span>
+          <div className="flex flex-col items-start justify-between gap-5 md:flex-row md:items-center">
+            <div>
+              <div className="mb-2 flex items-center gap-2 text-emerald-300">
+                <i className="fas fa-network-wired" />
+                <span className="text-sm font-semibold">Orchestrated intelligence loop</span>
+              </div>
+              <p className="max-w-3xl text-sm text-gray-300">
+                The orchestrator coordinates specialist agents, then the hashgraph layer records decisions and executes value flows for rewards and insurance outcomes.
+              </p>
+            </div>
+            <div className="rounded-xl border border-white/10 bg-black/30 px-4 py-2 text-xs text-gray-300">
+              Python Agents {'->'} Hedera HCS/HTS/HSCS
+            </div>
           </div>
         </motion.div>
       </div>

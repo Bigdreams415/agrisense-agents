@@ -1,12 +1,14 @@
 const normalizeUrl = (value?: string): string => (value || '').trim().replace(/\/+$/, '');
 
-const browserOrigin = typeof window !== 'undefined' ? window.location.origin : '';
-const inferredWsBaseUrl = browserOrigin
-  ? browserOrigin.replace(/^http/, (protocol) => (protocol === 'https' ? 'wss' : 'ws'))
+const configuredBackendUrl =
+  process.env.REACT_APP_BACKEND_URL || process.env.REACT_APP_API_URL || '';
+
+const inferredWsBaseUrl = configuredBackendUrl
+  ? configuredBackendUrl.replace(/^http/, (protocol) => (protocol === 'https' ? 'wss' : 'ws'))
   : '';
 
 export const BACKEND_URL = normalizeUrl(
-  process.env.REACT_APP_BACKEND_URL || process.env.REACT_APP_API_URL || browserOrigin
+  configuredBackendUrl
 );
 
 export const WS_BASE_URL = normalizeUrl(

@@ -10,7 +10,7 @@
 [![React](https://img.shields.io/badge/React-TypeScript-61DAFB?style=for-the-badge&logo=react)](https://reactjs.org)
 [![Gemini](https://img.shields.io/badge/Gemini-2.0_Flash-4285F4?style=for-the-badge&logo=google)](https://ai.google.dev)
 
-**[🚀 Live Demo](https://agrisense-agents.vercel.app) · [🎬 Demo Video](https://youtu.be/Gq1DeSbOIIU) · [📊 Pitch Deck](#)**
+**[🚀 Live Demo](https://agrisense-agents.vercel.app) · [🎬 Demo Video](https://youtu.be/Gq1DeSbOIIU) · [📊 Pitch Deck](AgriSense_AI_Pitch_Deck.pptx.pdf)**
 
 > *Africa's smallholder farmers lose 40–50% of harvests to preventable pests, droughts, and data gaps — over $10B annually. AgriSense AI deploys a network of autonomous AI agents that think, decide, and act on behalf of farmers — detecting diseases, reasoning over satellite data, and triggering insurance payouts automatically. Every agent decision is logged immutably on Hedera HCS, creating the world's first fully auditable autonomous agricultural economy.*
 
