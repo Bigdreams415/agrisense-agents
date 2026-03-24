@@ -148,9 +148,14 @@ const RewardsCenter: React.FC = () => {
       }, 2000);
       
     } catch (error: any) {
+      const rawMessage = error?.message || 'Failed to claim rewards';
+      const friendlyMessage = rawMessage.includes('Only minter can call')
+        ? 'Claim failed: PestReward is not set as a minter on the ASAI contract yet. Run the addMinter script, then try again.'
+        : rawMessage;
+
       setClaimStatus('error');
-      setClaimMessage(error.message || 'Failed to claim rewards');
-      addNotification('Failed to claim rewards: ' + error.message, 'error');
+      setClaimMessage(friendlyMessage);
+      addNotification('Failed to claim rewards: ' + friendlyMessage, 'error');
     }
   };
 
@@ -547,14 +552,6 @@ const RewardsCenter: React.FC = () => {
                     </div>
                   )}
 
-                  {!isConnected && (
-                    <p className="text-center text-orange-500 mt-4">
-                      <i className="fas fa-exclamation-triangle mr-2"></i>
-                      Connect your wallet to purchase insurance
-                    </p>
-                  )}
-
-                  ``
                   {!isConnected && (
                     <p className="text-center text-orange-500 mt-4">
                       <i className="fas fa-exclamation-triangle mr-2"></i>
